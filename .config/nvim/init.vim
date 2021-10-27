@@ -7,14 +7,13 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set number
-set cc=120
+set cc=100
 syntax on
 
 set spelllang=cs,en
 set spell
 
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set list
 
 call plug#begin("~/.vim/plugged")
 				Plug 'scrooloose/nerdtree'
