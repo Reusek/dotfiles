@@ -18,13 +18,12 @@ syntax on
 set spelllang=cs,en
 set spell
 
-# set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 call plug#begin("~/.config/nvim/plugged")
 	Plug 'scrooloose/nerdtree'
     Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim'  
+	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'gruvbox-community/gruvbox'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'neovim/nvim-lspconfig'
@@ -33,7 +32,7 @@ call plug#begin("~/.config/nvim/plugged")
 call plug#end()
 
 colorscheme gruvbox
-highlight Normal guibg=none
+highlight Normal ctermbg=NONE guibg=NONE
 
 lua << EOF
     require'lspinstall'.setup() -- important
@@ -58,4 +57,4 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 nnoremap <c-n> :NERDTreeToggle<CR>
-
+nnoremap <home> <esc>$
