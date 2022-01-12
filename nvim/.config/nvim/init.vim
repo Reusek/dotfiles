@@ -10,7 +10,7 @@ set noerrorbells
 set nowrap
 set incsearch
 set scrolloff=8
-
+set mouse=a
 
 set colorcolumn=80
 set signcolumn=yes:1
