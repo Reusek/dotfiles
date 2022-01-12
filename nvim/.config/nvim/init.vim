@@ -3,6 +3,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set relativenumber
+set nu rnu
 set nohlsearch
 set hidden
 set noerrorbells
@@ -10,8 +11,9 @@ set nowrap
 set incsearch
 set scrolloff=8
 
+
 set colorcolumn=80
-set signcolumn=yes
+set signcolumn=yes:1
 
 syntax on
 
@@ -19,29 +21,28 @@ set spelllang=cs,en
 set spell
 
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
 
 call plug#begin("~/.config/nvim/plugged")
 	Plug 'scrooloose/nerdtree'
-    Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'gruvbox-community/gruvbox'
+    Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    Plug 'rakr/vim-one'
+    Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'neovim/nvim-lspconfig'
-    Plug 'kabouzeid/nvim-lspinstall'
-    Plug 'ap/vim-css-color'
+	Plug 'vim-airline/vim-airline'
+	Plug 'ap/vim-css-color'
+	Plug 'editorconfig/editorconfig-vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-colorscheme gruvbox
-highlight Normal ctermbg=NONE guibg=NONE
-
-lua << EOF
-    require'lspinstall'.setup() -- important
-
-    local servers = require'lspinstall'.installed_servers()
-    for _, server in pairs(servers) do
-      require'lspconfig'[server].setup{}
-    end
-EOF
+colorscheme onehalfdark
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+let g:gitgutter_set_sign_backgrounds = 1
 
 let mapleader=" "
 
@@ -57,4 +58,6 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <home> <esc>$
+
+nmap <leader>gs :G<CR>
+

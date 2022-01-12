@@ -1,0 +1,2 @@
+#!/bin/sh
+xrandr --output DVI-D-0 --primary --mode 2560x1440 --pos 2560x320 --rotate right --rate 74.97 --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate inverted --rate 74.97 --output DP-0 --mode 2560x1440 --pos 0x1440 --rotate normal --rate 74.97 --output DP-1 --off
