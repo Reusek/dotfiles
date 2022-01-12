@@ -61,3 +61,8 @@ nnoremap <c-n> :NERDTreeToggle<CR>
 
 nmap <leader>gs :G<CR>
 
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev WQ wq
+cnoreabbrev Wq wq
+
