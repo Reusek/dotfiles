@@ -26,7 +26,7 @@ exec_always --no-startup-id "picom"
 exec_always --no-startup-id "dunst"
 
 # Init script
-exec_always --no-startup-id "init"
+exec_always --no-startup-id "init-i3"
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set-sl
+set-wallpaper
+
+# feh --bg-fill ~/Obrázky/wallpaper/nasa-space-japanese-2560×1440.jpg
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pushd ~/Obrázky/wallpaper/AnimeBackgrounds > /dev/null
+
+random_file=$(shuf -ezn 1 * | xargs -0 -n1 echo)
+
+echo "File:" ${random_file}
+
+feh --bg-fill ./${random_file}
+
+popd > /dev/null
