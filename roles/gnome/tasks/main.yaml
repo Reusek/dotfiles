@@ -1,0 +1,13 @@
+---
+- name: Install GNOME
+  ansible.builtin.package:
+    name:
+      - gnome
+      - gnome-extra
+      - gnome-tweaks
+      - xorg-server-xwayland
+    state: present
+  become: yes
+
+- include: dconf.yaml
+

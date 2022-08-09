@@ -1,0 +1,4 @@
+---
+- name: update DConf database
+  command: dconf update
+

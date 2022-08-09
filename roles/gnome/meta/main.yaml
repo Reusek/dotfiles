@@ -1,0 +1,7 @@
+---
+dependencies:
+  - { role: dconf }
+  - { role: xorg }
+  - { role: gdm }
+  - { role: networkmanager }
+

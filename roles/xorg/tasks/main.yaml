@@ -1,0 +1,29 @@
+---
+- name: Install Xorg
+  ansible.builtin.package:
+    name:
+      - xorg-server
+    state: present
+  become: yes
+
+- name: Install Xinit
+  ansible.builtin.package:
+    name:
+      - xorg-xinit
+    state: present
+  become: yes
+
+- name: Install Xmodmap
+  ansible.builtin.package:
+    name:
+      - xorg-xmodmap
+    state: present
+  become: yes
+
+- name: Install Xdpyinfo
+  ansible.builtin.package:
+    name:
+      - xorg-xdpyinfo
+    state: present
+  become: yes
+

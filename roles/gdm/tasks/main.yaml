@@ -1,0 +1,34 @@
+---
+- name: Install GNOME Display Manager
+  ansible.builtin.package:
+    name:
+      - gdm
+    state: present
+  become: yes
+
+- name: Enable
+  service:
+    name: gdm.service
+    enabled: yes
+  become: yes
+
+- name: Creating DConf configuration profile
+  copy:
+    src: profile/gdm
+    dest: /etc/dconf/profile/gdm
+  become: yes
+
+- name: Creating gdm.d directory for DConf
+  file:
+    path: /etc/dconf/db/gdm.d
+    state: directory
+    mode: 0755
+  become: yes
+
+- name: Configuring
+  template:
+    src: gdm.d/00-gdm.j2
+    dest: /etc/dconf/db/gdm.d/00-gdm
+  notify: update DConf database
+  become: yes
+
