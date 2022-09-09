@@ -6,13 +6,12 @@ SSH_DIR="$HOME/.ssh"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 if ! [ -x "$(command -v ansible)" ]; then
-	sudo pacman -S ansible --noconfirm
+	sudo dnf -y install ansible
 fi
 
 if ! [ -x "$(command -v ssh-keygen)" ]; then
-	sudo pacman -S openssh --noconfirm
+	sudo dnf -y install openssh
 fi
-
 
 if ! [[ -f "$SSH_DIR/authorized_keys" ]]; then
 	mkdir -p "$SSH_DIR"
