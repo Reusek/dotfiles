@@ -5,5 +5,3 @@ default_roles:
   - configs
   - neovim
 
-config:
-  - kitty
