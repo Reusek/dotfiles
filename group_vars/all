@@ -2,6 +2,8 @@ default_roles:
   - qtile
   - zsh
   - docker
-  - configs
   - neovim
+  - configs
 
+config:
+  - kitty
