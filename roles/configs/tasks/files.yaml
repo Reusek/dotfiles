@@ -1,3 +1,8 @@
+- name: Config folder
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.config"
+    state: directory
+
 - name: Get info about config
   ansible.builtin.stat:
     path: "{{ ansible_env.HOME }}/.config/{{ item }}"
