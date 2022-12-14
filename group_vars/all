@@ -3,6 +3,7 @@ default_roles:
   - zsh
   - docker
   - configs
+  - neovim
 
 config:
   - kitty
