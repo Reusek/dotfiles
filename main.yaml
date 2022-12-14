@@ -24,4 +24,3 @@
       with_items: "{{ roles }}"
       tags:
         - always
-

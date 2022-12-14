@@ -9,7 +9,7 @@
       - tree-sitter
       - unzip
     state: latest
-  become: yes
+  become: true
 
 - name: Clone
   ansible.builtin.git:
@@ -34,11 +34,11 @@
   make:
     chdir: "{{ ansible_user_dir }}/Development/repository/github.com/neovim/neovim"
     target: install
-  become: yes
+  become: true
   when: clone.changed
 
 - name: Remove build folder
   ansible.builtin.file:
     path: "{{ ansible_user_dir }}/Development/repository/github.com/neovim/neovim/build"
     state: absent
-  become: yes
+  become: true

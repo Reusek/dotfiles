@@ -5,11 +5,11 @@
       - lightdm
       - lightdm-gtk-greeter
     state: present
-  become: yes
+  become: true
 
 - name: Install qtile
   ansible.builtin.package:
     name:
       - qtile
     state: present
-  become: yes
+  become: true
