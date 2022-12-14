@@ -4,4 +4,3 @@
   loop: "{{ config }}"
   loop_control:
     loop_var: item
-

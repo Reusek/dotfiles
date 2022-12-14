@@ -14,4 +14,3 @@
     src: "{{ ansible_env.HOME }}/.dotfiles/config/{{ item }}"
     dest: "{{ ansible_env.HOME }}/.config/{{ item }}"
     state: link
-
