@@ -1,9 +1,0 @@
-default_roles:
-  - qtile
-  - zsh
-  - docker
-  - neovim
-  - configs
-
-config:
-  - kitty

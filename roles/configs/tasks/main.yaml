@@ -1,6 +1,0 @@
----
-- name: Setup config folders.
-  include_tasks: files.yaml
-  loop: "{{ config }}"
-  loop_control:
-    loop_var: item

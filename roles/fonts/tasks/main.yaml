@@ -1,7 +1,0 @@
----
-- name: Install
-  ansible.builtin.package:
-    name:
-      - ttf-droid
-    state: present
-  become: yes
